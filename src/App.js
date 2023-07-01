@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "./assets/investment-calculator-logo.png";
-import InvestmentForm from "./components/InvestmentForm";
+import UserInput from "./components/UserInput/UserInput";
+import Header from "./components/Header/Header";
+import ResultsTable from "./components/ResultsTable/ResultsTable";
 function App() {
   const calculateHandler = (userInput) => {
     // Should be triggered when form is submitted
