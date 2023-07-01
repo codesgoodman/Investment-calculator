@@ -10,8 +10,7 @@ const UserInput = (props) => {
   const [userInput, setUserInput] = useState(initialUserInput);
   const submitHandler = (event) => {
     event.preventDefault();
-    // props.onCalculate(event.target.value);
-    console.log("submit");
+    props.onCalculate(userInput);
   };
   const resetHandler = () => {
     setUserInput(initialUserInput);
