@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
+const initialUserInput = {
+  "current-savings": 10000,
+  "yearly-contribution": 1200,
+  "expected-return": 7,
+  duration: 10,
+};
 const UserInput = (props) => {
+  const [userInput, setUserInput] = useState(initialUserInput);
   const submitHandler = (event) => {
     event.preventDefault();
     // props.onCalculate(event.target.value);
     console.log("submit");
   };
   const resetHandler = () => {
-    console.log("reset");
+    setUserInput(initialUserInput);
   };
-  const inputChangeHandler = (input, value) => {};
+  const inputChangeHandler = (input, value) => {
+    setUserInput((prevUserInput) => {
+      return { ...prevUserInput, [input]: value }; //[input] is used to overwrite
+    });
+  };
   return (
     <form className="form" onSubmit={submitHandler}>
       <div className="input-group">
