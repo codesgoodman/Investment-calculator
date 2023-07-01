@@ -6,8 +6,8 @@ function ResultsTable(props) {
     <table className="result">
       <thead>
         <tr>
-          <th>Year</th>
-          <th>Total Savings</th>
+          <th>{props.data.year}</th>
+          <th>{props.data.savingsEndOfYear}</th>
           <th>Interest (Year)</th>
           <th>Total Interest</th>
           <th>Invested Capital</th>
