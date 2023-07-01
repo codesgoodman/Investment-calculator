@@ -3,7 +3,11 @@ import React from "react";
 const UserInput = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
-    props.onCalculate(event.target.value);
+    // props.onCalculate(event.target.value);
+    console.log("submit");
+  };
+  const resetHandler = () => {
+    console.log("reset");
   };
   return (
     <form className="form" onSubmit={submitHandler}>
@@ -30,7 +34,7 @@ const UserInput = (props) => {
         </p>
       </div>
       <p className="actions">
-        <button type="reset" className="buttonAlt">
+        <button type="reset" className="buttonAlt" onClick={resetHandler}>
           Reset
         </button>
         <button type="submit" className="button">
