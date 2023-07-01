@@ -30,6 +30,7 @@ const UserInput = (props) => {
             onChange={(event) => {
               inputChangeHandler("current-savings", event.target.value);
             }}
+            value={userInput["current-savings"]}
             type="number"
             id="current-savings"
           />
@@ -40,6 +41,7 @@ const UserInput = (props) => {
             onChange={(event) => {
               inputChangeHandler("yearly-contribution", event.target.value);
             }}
+            value={userInput["yearly-contribution"]}
             type="number"
             id="yearly-contribution"
           />
@@ -54,6 +56,7 @@ const UserInput = (props) => {
             onChange={(event) => {
               inputChangeHandler("expected-return", event.target.value);
             }}
+            value={userInput["expected-return"]}
             type="number"
             id="expected-return"
           />
@@ -64,6 +67,7 @@ const UserInput = (props) => {
             onChange={(event) => {
               inputChangeHandler("duration", event.target.value);
             }}
+            value={userInput["duration"]}
             type="number"
             id="duration"
           />
