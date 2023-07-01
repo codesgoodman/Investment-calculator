@@ -1,6 +1,7 @@
 import React from "react";
 
-function ResultsTable() {
+function ResultsTable(props) {
+  console.log(props.data);
   return (
     <table className="result">
       <thead>
