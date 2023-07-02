@@ -18,7 +18,7 @@ const UserInput = (props) => {
   };
   const inputChangeHandler = (input, value) => {
     setUserInput((prevUserInput) => {
-      return { ...prevUserInput, [input]: value }; //[input] is used to overwrite
+      return { ...prevUserInput, [input]: +value }; //[input] is used to overwrite
     });
   };
   return (
