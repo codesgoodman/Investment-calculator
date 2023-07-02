@@ -14,7 +14,7 @@ function ResultsTable(props) {
       </thead>
       <tbody>
         {props.data.map((yearData) => (
-          <tr>
+          <tr key={yearData.year}>
             <td>{yearData.year}</td>
             <td>{yearData.savingsEndOfYear}</td>
             <td>{yearData.yearlyInterest}</td>
